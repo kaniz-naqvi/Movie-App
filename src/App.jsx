@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 const API_URL = "http://www.omdbapi.com/?apikey=c2eaca1e";
 import "./App.css";
-
-import SearchCard from "./SearchCard";
+import searchIcon from "./search.svg";
 import MovieCard from "./MovieCard";
 
 const App = () => {
@@ -22,14 +21,32 @@ const App = () => {
 
   const [inputValu, setInputValu] = useState("");
 
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      searchMovies(inputValu);
+    }
+  };
+
   return (
     <div className="app">
       <h1>Movie Land</h1>
-      <SearchCard
-        value={inputValu}
-        setValue={setInputValu}
-        handleSearch={() => searchMovies(inputValu)}
-      />
+      <div className="search">
+        <input
+          value={inputValu}
+          onChange={(e) => {
+            setInputValu(e.target.value);
+          }}
+          type="text"
+          placeholder="Search for movies"
+          onKeyDown={handleKeyDown}
+        />
+
+        <img
+          src={searchIcon}
+          onClick={() => searchMovies(inputValu)}
+          alt="Search"
+        />
+      </div>
       {movie.length > 0 ? (
         <div className="container">
           {movie.map((movieItem) => (
