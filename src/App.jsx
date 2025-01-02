@@ -7,16 +7,16 @@ import MovieCard from "./MovieCard";
 const App = () => {
   const [movie, setMovie] = useState([]);
 
-  const searchMovies = async (title) => {
+  const searchMovies = async (title, limit = 10) => {
     const response = await fetch(`${API_URL}&s=${title}`);
     let data = await response.json();
     if (data.Search) {
-      setMovie(data.Search);
+      setMovie(data.Search.slice(0, 9));
     }
   };
 
   useEffect(() => {
-    searchMovies("SuperMan");
+    searchMovies("harry");
   }, []);
 
   const [inputValu, setInputValu] = useState("");
