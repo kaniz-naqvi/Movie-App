@@ -1,17 +1,28 @@
 import React, { useEffect, useState } from "react";
-const API_URL = "http://www.omdbapi.com/?apikey=c2eaca1e";
-import "./App.css";
+const API_URL = "https://www.omdbapi.com/?apikey=c2eaca1e";
+import "./styles.css";
 import searchIcon from "./search.svg";
 import MovieCard from "./MovieCard";
 
 const App = () => {
   const [movie, setMovie] = useState([]);
 
-  const searchMovies = async (title, limit = 10) => {
-    const response = await fetch(`${API_URL}&s=${title}`);
-    let data = await response.json();
-    if (data.Search) {
-      setMovie(data.Search.slice(0, 9));
+  const searchMovies = async (title) => {
+    try {
+      const response = await fetch(
+        `https://www.omdbapi.com/?apikey=c2eaca1e&s=${title}`
+      );
+      const data = await response.json();
+
+      if (response.ok && data.Search) {
+        setMovie(data.Search.slice(0, 9));
+      } else {
+        console.error("No search results or API limit reached:", data);
+        setMovie([]);
+      }
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      setMovie([]);
     }
   };
 
