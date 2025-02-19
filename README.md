@@ -1,19 +1,18 @@
 # 🎬 Movie Land
 
-Movie Land is a **React app** that allows users to search for movies using API integration. It features a clean and simple UI.
+Movie Land is a **React app** that allows users to search for movies using API integration. It features a clean and simple UI with a responsive design.
 
 ## Features
 
--Clean UI
-
-- Movie search by name
-- Display **movie poster & release year**  
-  -Fully **responsive design** (Mobile-friendly)
+- Clean and simple UI
+- Search movies by name
+- Display movie poster and release year
+- Fully responsive design
 
 ## Tech Stack
 
-- **React**
-- **CSS**
+- React
+- CSS
 
 ## Installation
 
