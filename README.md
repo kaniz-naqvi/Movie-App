@@ -47,4 +47,4 @@ Follow these steps to set up the project locally:
 
 ### Live Demo
 
-- (MovieLand)[https://movie-app-xi-steel-47.vercel.app/]
+- [MovieLand](https://movie-app-xi-steel-47.vercel.app/)
