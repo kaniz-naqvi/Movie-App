@@ -25,22 +25,24 @@ Follow these steps to set up the project locally:
    ```
 2. **Navigate to the project directory**
 
-```bash
-  cd Movie-App
-```
+   ```bash
+   cd Movie-App
+   ```
 
 3. **Install dependencies**
 
-```bash
-  npm install
-```
+   ```bash
+   npm install
+   ```
 
 4. **Run the app locally**
 
-```bash
-  npm run dev
-```
+   ```bash
+   npm run dev
+   ```
 
 ## API Integration
 
 - This app fetches movie data using an external API. (OMDB)
+
+### Live Demo
