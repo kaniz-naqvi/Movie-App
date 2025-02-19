@@ -46,3 +46,5 @@ Follow these steps to set up the project locally:
 - This app fetches movie data using an external API. (OMDB)
 
 ### Live Demo
+
+- (MovieLand)[https://movie-app-xi-steel-47.vercel.app/]
